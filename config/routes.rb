@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'welcome#index'
+  resources :leagues, only: %i[index new create] do
+    get 'find', on: :collection
+  end
+  root to: 'leagues#index'
 end

@@ -1,1 +1,16 @@
 %h1 Create a League
+
+= form_with model: @league do |form|
+  = form.label :name, 'League Name'
+  = form.text_field :name
+
+  = form.label :lat, 'Latitude'
+  = form.number_field :lat
+
+  = form.label :lng, 'Longitude'
+  = form.number_field :lng
+
+  = form.label :price, 'Price'
+  = form.number_field :price
+
+  = form.submit

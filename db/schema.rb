@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 2019_10_04_165754) do
 
   create_table "leagues", force: :cascade do |t|
     t.string "name", null: false
-    t.point "lat_long", null: false
+    t.decimal "lat", null: false
+    t.decimal "lng", null: false
     t.integer "price", null: false
   end
 
